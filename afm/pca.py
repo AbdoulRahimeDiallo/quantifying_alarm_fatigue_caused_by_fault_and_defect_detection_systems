@@ -20,7 +20,7 @@ class PCA_fault_detection():
         Method for training the detection model, setting detection limit and plotting the explained variance 
         Args :
             data : Normal operating condition data
-            alpha : nominal risk of false alarm
+            alpha : nominal risk of false alarms
             plot : plotting the explained variance
         """             
         # Data standardisation
@@ -65,11 +65,11 @@ class PCA_fault_detection():
             )
             ax.set_xlabel('Principal Components')
             ax.set_ylabel('Proportion of Explained Variance')
-            ax.set_title('Explained Variance by Retained Component');
+            ax.set_title('Explained Variance by Retained Components')
             
     def calculate_spe(self, X):
         '''
-        Method that calculates the Square Prediction Error (SPE) of a given data X
+        Method that calculates the Square Prediction Error (SPE) of given data X
         '''
         # Standardisation of the data
         X = np.array((X-self.mu_train)/self.std_train)
